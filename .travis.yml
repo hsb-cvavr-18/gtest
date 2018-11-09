@@ -1,17 +1,12 @@
+sudo: required
+
+compiler:
+- gcc
+
 language: cpp
+
 matrix:
   include:
-    - os: linux
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-precise-3.6
-          packages:
-            - clang-3.6
-      env:
-        - MATRIX_EVAL="CC=clang-3.6 && CXX=clang++-3.6"
-
     # works on Precise and Trusty
     - os: linux
       addons:
@@ -103,7 +98,7 @@ install:
 
   # if Makefile is cached, then skip cmake opencv
   # Set build instructions for Ubuntu distro.
-  - cat Makefile > l1 || cmake -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.4/modules CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=OFF -D BUILD_EXAMPLES=OFF -D WITH_QT=ON -D WITH_OPENGL=ON ..
+  - cat Makefile > l1 || cmake -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.4/modules CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=ON -D BUILD_opencv_java=OFF -D BUILD_opencv_python=OFF -D -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=OFF -D BUILD_EXAMPLES=OFF -D WITH_QT=ON -D WITH_OPENGL=ON ..
 
   # if Makefile is cached, then skip make opencv
   # Run 'make' with multiple threads.
