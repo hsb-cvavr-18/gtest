@@ -2,6 +2,7 @@
 // Created by Konstantin Gredeskoul on 5/16/17.
 //
 #include <division.h>
+#include <opencv2/core/mat.hpp>
 #include "gtest/gtest.h"
 
 using namespace std;
