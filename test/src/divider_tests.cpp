@@ -3,7 +3,7 @@
 //
 #include <division.h>
 #include "gtest/gtest.h"
-#include "opencv2/aruco.hpp"
+
 using namespace std;
 
 
