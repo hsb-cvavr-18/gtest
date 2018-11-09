@@ -88,8 +88,9 @@ install:
   - unzip -n opencv.zip > log1
 
   # Download EXTRA MODULES and extract.
-  - curl -sL https://github.com/Itseez/opencv_contrib/archive/3.4.zip > opencv_contrib.zip
-  - unzip -n opencv_contrib.zip > log2
+  # Currently not required for builds: -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.4/modules
+  #- curl -sL https://github.com/Itseez/opencv_contrib/archive/3.4.zip > opencv_contrib.zip
+  #- unzip -n opencv_contrib.zip > log2
 
   # Create a new 'build' folder.
   - cd opencv-3.4
@@ -98,7 +99,7 @@ install:
 
   # if Makefile is cached, then skip cmake opencv
   # Set build instructions for Ubuntu distro.
-  - cat Makefile > l1 || cmake -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.4/modules -D BUILD_opencv_apps=OFF -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D BUILD_DOCS=OFF -D BUILD_PERF_TESTS=OFF -D BUILD_TESTS=OFF -D WITH_CSTRIPES=ON -D WITH_TBB=ON -D BUILD_opencv_java=OFF -D BUILD_opencv_python=OFF -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=OFF -D BUILD_EXAMPLES=OFF -D WITH_QT=ON -D WITH_OPENCL=ON -D WITH_OPENGL=OFF ..
+  - cat Makefile > l1 || cmake -D BUILD_opencv_apps=OFF -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D BUILD_DOCS=OFF -D BUILD_PERF_TESTS=OFF -D BUILD_TESTS=OFF -D WITH_CSTRIPES=ON -D WITH_TBB=ON -D BUILD_opencv_java=OFF -D BUILD_opencv_python=OFF -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=OFF -D BUILD_EXAMPLES=OFF -D WITH_QT=ON -D WITH_OPENCL=ON -D WITH_OPENGL=OFF ..
 
   # if Makefile is cached, then skip make opencv
   # Run 'make' with multiple threads.
