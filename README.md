@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/kigster/cmake-project-template.svg?branch=master)](https://travis-ci.org/kigster/cmake-project-template)
+[![Build Status](https://travis-ci.org/hsb-cvavr-18/gtest.svg?branch=master)](https://travis-ci.org/hsb-cvavr-18/gtest)
 
 # CMake C++ Project Template
 
@@ -38,7 +38,7 @@ First we need to check out the git repo:
 
 ```bash
 $ cd ${insert your workspace folder here}
-$ git clone https://github.com/kigster/cmake-project-template my-project
+$ git clone https://github.com/hsb-cvavr-18/gtest my-project
 $ cd my-project
 $ git submodule init && git submodule update
 ```
@@ -138,9 +138,9 @@ Tests:
 
 **Pull Requests are WELCOME!** Please submit any fixes or improvements, and I promise to review it as soon as I can at the project URL:
 
- * [Project Github Home](https://github.com/kigster/cmake-project-template)
- * [Submit Issues](https://github.com/kigster/cmake-project-template/issues)
- * [Pull Requests](https://github.com/kigster/cmake-project-template/pulls)
+ * [Project Github Home](https://github.com/hsb-cvavr-18/gtest)
+ * [Submit Issues](https://github.com/hsb-cvavr-18/gtest/issues)
+ * [Pull Requests](https://github.com/hsb-cvavr-18/gtest/pulls)
 
 ### License
 
