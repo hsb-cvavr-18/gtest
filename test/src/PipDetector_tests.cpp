@@ -4,7 +4,7 @@
 
 #include <opencv2/core/mat.hpp>
 #include "gtest/gtest.h"
-#include "../src/PipsDetector/PipsDetector.h"
+#include <PipsDetector.h>
 
 using namespace std;
 
