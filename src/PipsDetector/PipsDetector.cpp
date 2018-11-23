@@ -35,7 +35,7 @@ unsigned long PipsDetector::countPips(cv::Mat piece) {
     cv::floodFill(piece, cv::Point(149, 149), cv::Scalar(0));
 
     // show
-    _printer->printImage("processed", piece); cv::waitKey(0);
+    _printer->printImage("processed", piece);
 
     // search for blobs
     cv::SimpleBlobDetector::Params params;
@@ -46,7 +46,7 @@ unsigned long PipsDetector::countPips(cv::Mat piece) {
     piece = diceTemp;
 
     // show
-    _printer->printImage("blur", piece); cv::waitKey(0);
+    _printer->printImage("blur", piece);
 
     // filter by interia defines how elongated a shape is.
     //params.filterByInertia = true;
